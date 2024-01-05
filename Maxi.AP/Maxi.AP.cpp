@@ -7,7 +7,7 @@ int main()
 	list<Libros> libros = reader.Leer(Libros_Biblioteca);
 	std::cout << "Listo";
     
-    int opcion;
+    int menu;
     cout << "Menu:" << endl;
     cout << "1. Comprar" << endl;
     cout << "2. Vender" << endl;
