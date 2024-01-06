@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Lector_CSV.cpp" />
+    <ClCompile Include="Libros.cpp" />
     <ClCompile Include="Maxi.AP.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Lector_CSV.h" />
+    <ClInclude Include="Libros.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\Users\maxim\OneDrive\Escritorio\Advance programing\best-selling-books.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
