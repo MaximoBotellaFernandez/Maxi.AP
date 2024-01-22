@@ -1,18 +1,17 @@
 #pragma once
 #include <string>
 
-using namespace std;
+using namespace std; /*Me ha dicho Angel que lo tengo que quitar*/
 
 class Libros
 { 
 public:
-	//Book, Author(s), Original language, First published, Approximate sales in millions, Genre
-	string Titulo;
+	string Titulo;  
 	string Autor;
 	string Lenguaje_Original;
-	int Año_de_Publicacion;
-	int Ventsa_en_Millones;
+	int Fecha_de_Publicacion;
+	int Venta_en_Millones;
 	string Genero;
-	//int Cantidad_en_Stock;
-	//int Precio;
+	//double Cantidad (añadir desde r)
+	//double Precio (añadir desde r)
 };

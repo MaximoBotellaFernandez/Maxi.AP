@@ -8,7 +8,7 @@ using namespace std;
 
 list<Libros> Lector_CSV::Leer(string path)
 {
-	//Implementar la lectura del achivo CSV y devolver un array de ç?
+	//Implementar la lectura del achivo CSV y devolver un array
 	list<Libros> ret = {};
 	string line;
 	ifstream myfile(path);
@@ -43,5 +43,18 @@ vector<string> Lector_CSV::split(string source, string delimiter)
 		source.erase(0, pos + delimiter.length());
 	}
 	ret.push_back(source);
+	return ret;
+}
+
+Libros Lector_CSV::LeerLibro(string line)
+{
+	vector<string> parts = split(line, ",");
+	Libros ret;
+	ret.Titulo = parts[0];
+	ret.Autor = parts[1];
+	ret.Lenguaje_Original = parts[2];
+	ret.Fecha_de_Publicacion = stoi(parts[3]);
+	ret.Venta_en_Millones = stoi(parts[4]);
+	ret.Genero = parts[5];
 	return ret;
 }

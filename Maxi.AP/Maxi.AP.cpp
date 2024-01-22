@@ -55,7 +55,7 @@ int main()
         cout << "Son " << Precio * Unidades << " euros";
         //Añadir al csv y sumar las unidades nuevas al stock total
     case 2:
-
+        
 
     default:
         break;
