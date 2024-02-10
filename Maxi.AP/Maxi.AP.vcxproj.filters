@@ -24,12 +24,18 @@
     <ClCompile Include="Lector_CSV.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Escaparate.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Libros.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Lector_CSV.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Escaparate.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

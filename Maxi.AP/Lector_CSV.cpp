@@ -71,6 +71,7 @@ vector<string> Lector_CSV::split(string source, char delimiter)
 				string token2 = source.substr(0, pos);
 				token.append(token2);
 				source.erase(0, pos + 1);
+				// TODO: quitar comillas
 			}
 			else {
 				// TODO Maxi. poner un mensaje de error porque no hay salida
