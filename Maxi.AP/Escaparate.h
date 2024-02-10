@@ -9,5 +9,5 @@ using namespace std;
 class Escaparate
 {
 public:
-	void Mostrar(list<Libros> libros);
+	void Mostrar(list<Libros>* libros);
 };

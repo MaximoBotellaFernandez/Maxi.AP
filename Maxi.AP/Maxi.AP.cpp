@@ -41,7 +41,7 @@ int main()
             case 3:
                 break;
             case 4:
-                escaparate.Mostrar(libros);
+                escaparate.Mostrar(&libros);
                 break;
             default:
                 break;
