@@ -34,8 +34,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Users\maxim\OneDrive\Escritorio\Advance programing\best-selling-books.csv">
+    <CopyFileToFolders Include="..\..\..\..\Users\maxim\OneDrive\Escritorio\Advance programing\best-selling-books.csv">
       <Filter>Archivos de recursos</Filter>
-    </None>
+    </CopyFileToFolders>
   </ItemGroup>
 </Project>

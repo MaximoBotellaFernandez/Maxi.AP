@@ -136,7 +136,11 @@
     <ClInclude Include="Libros.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Users\maxim\OneDrive\Escritorio\Advance programing\best-selling-books.csv" />
+    <CopyFileToFolders Include="..\..\..\..\Users\maxim\OneDrive\Escritorio\Advance programing\best-selling-books.csv">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

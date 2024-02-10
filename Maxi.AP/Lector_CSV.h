@@ -7,11 +7,14 @@ using namespace std;
 
 class Lector_CSV
 {
+private:
+	string path;
+	string line;
+	Libros LeerLibro(string line);
+	vector<string> split(string source, char delimiter);
+
 public:
 	list<Libros> Leer(string path);
-
-private:
-	Libros LeerLibro(string line);
-	vector<string> split(string source, string delimiter);
-
+	int setPath(string fichero);
+	string getPath();
 };
