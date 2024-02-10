@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Comprar.cpp" />
     <ClCompile Include="Escaparate.cpp" />
     <ClCompile Include="Lector_CSV.cpp" />
     <ClCompile Include="Libros.cpp" />
     <ClCompile Include="Maxi.AP.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Comprar.h" />
     <ClInclude Include="Escaparate.h" />
     <ClInclude Include="Lector_CSV.h" />
     <ClInclude Include="Libros.h" />
