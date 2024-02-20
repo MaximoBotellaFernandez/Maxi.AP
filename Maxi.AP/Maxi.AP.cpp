@@ -5,6 +5,7 @@
 #include "Escaparate.h"
 #include "Comprar.h"
 #include "Escritor_CSV.h"
+#include "Vender.h"
 
 #define Libros_Libreria "C:\\git\\AP\\Maxi.AP\\x64\\Debug\\best-selling-book-r-datos.csv"
 using namespace std;
@@ -27,6 +28,7 @@ int main()
     Escaparate escaparate;
     Comprar comprar;
     Escritor_CSV escritor;
+    Vender vendedor;
     reader.setPath(Libros_Libreria);
     list<Libros> libros = reader.Leer(Libros_Libreria);
     int menu = 0;
@@ -39,6 +41,8 @@ int main()
                 escritor.Guardar(&libros, Libros_Libreria);
                 break;
             case 2:
+                vendedor.IniciarVenta(&libros, Libros_Libreria);
+                escritor.Guardar(&libros, Libros_Libreria);
                 break;
             case 3:
                 escaparate.Mostrar(&libros);

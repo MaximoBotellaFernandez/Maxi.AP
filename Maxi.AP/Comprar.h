@@ -10,6 +10,6 @@ private:
 	string line;
 public:
 	void IniciarCompra(list<Libros>* libros, string path);
-	bool ExisteLibro(string path, string Titulo);
+	bool buscar(list<Libros>* libros, string titulo, Libros& libro);
 };
 

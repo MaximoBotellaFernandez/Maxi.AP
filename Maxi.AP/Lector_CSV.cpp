@@ -54,7 +54,7 @@ Libros Lector_CSV::LeerLibro(string line)
 	ret.Fecha_de_Publicacion = stoi(parts[3]);
 	ret.Venta_en_Millones = stoi(parts[4]);
 	ret.Genero = parts[5];
-	ret.Unidades = stod(parts[6]);
+	ret.Unidades = stoi(parts[6]);
 	ret.Precio = stod(parts[7]);
 	return ret;
 }

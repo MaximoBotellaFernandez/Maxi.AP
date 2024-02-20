@@ -6,7 +6,7 @@ using namespace std;
 
 void Escritor_CSV::Guardar(list<Libros>* libros, string path)
 {
-	ofstream outputFile(path); // create a new output file or overwrite an existing one
+	ofstream outputFile(path);
 	if (!outputFile.is_open())
 	{
 		cerr << "Error abriendo el archivo\n";
