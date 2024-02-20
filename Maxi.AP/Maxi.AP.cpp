@@ -6,16 +6,15 @@
 #include "Comprar.h"
 #include "Escritor_CSV.h"
 
-#define Libros_Libreria "C:\\git\\AP\\Maxi.AP\\x64\\Debug\\best-selling-books.csv"
+#define Libros_Libreria "C:\\git\\AP\\Maxi.AP\\x64\\Debug\\best-selling-book-r-datos.csv"
 using namespace std;
 
 int ShowMenu() {
     cout << "Menu:" << endl;
     cout << "1. Comprar" << endl;
     cout << "2. Vender" << endl;
-    cout << "3. Alquilar" << endl;
-    cout << "4. Ver Stock" << endl;
-    cout << "5. Salir" << endl;
+    cout << "3. Ver Stock" << endl;
+    cout << "4. Salir" << endl;
     cout << "Ingrese su opcion: ";
     int menu;
     cin >> menu;
@@ -27,23 +26,21 @@ int main()
     Lector_CSV reader;
     Escaparate escaparate;
     Comprar comprar;
-    Escritor_CSV writer;
+    Escritor_CSV escritor;
     reader.setPath(Libros_Libreria);
     list<Libros> libros = reader.Leer(Libros_Libreria);
     int menu = 0;
-    while (menu != 5) {
+    while (menu != 4) {
         menu = ShowMenu();
         switch (menu)
         {
             case 1:
-                comprar.IniciarCompra(&libros);
-                writer.Guardar(&libros, Libros_Libreria);
+                comprar.IniciarCompra(&libros, Libros_Libreria);
+                escritor.Guardar(&libros, Libros_Libreria);
                 break;
             case 2:
                 break;
             case 3:
-                break;
-            case 4:
                 escaparate.Mostrar(&libros);
                 break;
             default:

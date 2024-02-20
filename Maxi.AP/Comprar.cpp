@@ -1,32 +1,43 @@
-#include <iostream>
 #include "Comprar.h"
+#include "Lector_CSV.h"
+#include <iostream>
 #include <string>
 #include <list>
+#include <fstream>
 
 using namespace std;
 
-void Comprar::IniciarCompra(list<Libros>* libros)
+void Comprar::IniciarCompra(list<Libros>* libros, string path)
 {
     Libros nuevoLibro;
     double Precio = 0;
     int Unidades = 0;
+    ifstream myfile(path);
+    list<Libros> ret = {};
+
+    myfile.open(path);
+
+    if (!myfile.is_open())
+        {
+            cout << "No se puede abrir el archivo \n";
+        }
 
     // TODO: buscar el libro por título y si existe, agregarle unidades
     cin.ignore();
     nuevoLibro.Titulo = readFromCin("Titulo del libro");
+
     nuevoLibro.Autor = readFromCin("Autor");
     nuevoLibro.Lenguaje_Original = readFromCin("Lenguaje original");
     string fecha = readFromCin("Fecha de publicacion");
     nuevoLibro.Fecha_de_Publicacion = stoi(fecha);
     nuevoLibro.Genero = readFromCin("Genero");
-
     string precio = readFromCin("Precio");
-    Precio = stod(precio);
+    nuevoLibro.Precio = stod(precio);
     string unidades = readFromCin("Unidades");
-    Unidades = stoi(unidades);
+    nuevoLibro.Unidades = stoi(unidades);
 
-    cout << "Son " << Precio * Unidades << " euros.\n";
-
+    cout << "Son " << nuevoLibro.Precio * nuevoLibro.Unidades << " euros.\n";
+    cout << "Quedan " << nuevoLibro.Unidades << " Unidades.\n";
     // TODO: hacer algo con unidades y precio
     libros->push_back(nuevoLibro);
 }

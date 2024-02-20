@@ -10,11 +10,11 @@ class Lector_CSV
 private:
 	string path;
 	string line;
-	Libros LeerLibro(string line);
-	vector<string> split(string source, char delimiter);
 
 public:
 	list<Libros> Leer(string path);
 	int setPath(string fichero);
 	string getPath();
+	vector<string> split(string source, char delimiter);
+	Libros LeerLibro(string line);
 };

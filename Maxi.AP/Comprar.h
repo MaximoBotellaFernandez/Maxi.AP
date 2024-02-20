@@ -6,8 +6,10 @@ class Comprar
 {
 private:
 	string readFromCin(string message);
-
+	string path;
+	string line;
 public:
-	void IniciarCompra(list<Libros>* libros);
+	void IniciarCompra(list<Libros>* libros, string path);
+	bool ExisteLibro(string path, string Titulo);
 };
 

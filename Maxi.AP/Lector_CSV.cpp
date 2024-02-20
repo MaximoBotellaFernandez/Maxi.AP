@@ -25,7 +25,7 @@ list<Libros> Lector_CSV::Leer(string path)
 			firstLineParsed = true;
 		else
 		{
-			Libros b = LeerLibro(line); //Posible error
+			Libros b = LeerLibro(line);
 			ret.push_back(b);
 		}
 	}
@@ -54,6 +54,8 @@ Libros Lector_CSV::LeerLibro(string line)
 	ret.Fecha_de_Publicacion = stoi(parts[3]);
 	ret.Venta_en_Millones = stoi(parts[4]);
 	ret.Genero = parts[5];
+	ret.Unidades = stod(parts[6]);
+	ret.Precio = stod(parts[7]);
 	return ret;
 }
 
@@ -71,10 +73,11 @@ vector<string> Lector_CSV::split(string source, char delimiter)
 				string token2 = source.substr(0, pos);
 				token.append(token2);
 				source.erase(0, pos + 1);
-				// TODO: quitar comillas
+				token.erase(0, pos = 1);
+				//TODO: borrar la segunda "
 			}
 			else {
-				// TODO: poner un mensaje de error porque no hay salida
+				
 			}
 		}
 		ret.push_back(token);

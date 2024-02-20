@@ -12,6 +12,6 @@ public:
 	int Fecha_de_Publicacion;
 	int Venta_en_Millones;
 	string Genero;
-	//double Cantidad (añadir)
-	//double Precio (añadir)
+	int Unidades;
+	double Precio;
 };

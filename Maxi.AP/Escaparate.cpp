@@ -5,7 +5,7 @@ void Escaparate::Mostrar(list<Libros>* libros)
 	for (std::list<Libros>::iterator it = libros->begin(); it != libros->end(); ++it)
 	{
 		Libros libro = *it;
-		cout << libro.Titulo << ", " << libro.Autor << " (" << libro.Fecha_de_Publicacion << ")\n";
+		cout << libro.Titulo << ", " << libro.Autor << " (" << libro.Fecha_de_Publicacion << ") " << libro.Precio << " Euros " << libro.Unidades << " Unidades\n";
 	}
 	cout << "\n";
 }

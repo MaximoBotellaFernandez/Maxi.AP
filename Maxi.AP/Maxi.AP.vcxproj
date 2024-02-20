@@ -133,6 +133,7 @@
     <ClCompile Include="Lector_CSV.cpp" />
     <ClCompile Include="Libros.cpp" />
     <ClCompile Include="Maxi.AP.cpp" />
+    <ClCompile Include="Vender.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Comprar.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="Escritor_CSV.h" />
     <ClInclude Include="Lector_CSV.h" />
     <ClInclude Include="Libros.h" />
+    <ClInclude Include="Vender.h" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="..\..\..\..\Users\maxim\OneDrive\Escritorio\Advance programing\best-selling-books.csv">
